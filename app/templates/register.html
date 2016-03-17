@@ -1,0 +1,23 @@
+<ion-view data-view-title="Register">
+  <ion-content class="padding">
+    <form data-ng-submit="register(firstName, lastName, email, password)">
+      <ion-list class="padding">
+        <label class="item item-input">
+          <input placeholder="First name" type="text" data-ng-model="firstName" required/>
+        </label>
+        <label class="item item-input">
+          <input placeholder="Last name" type="text" data-ng-model="lastName" required/>
+        </label>
+        <label class="item item-input">
+          <input placeholder="Email" type="email" data-ng-model="email" required/>
+        </label>
+        <label class="item item-input">
+          <input placeholder="Password" type="password" data-ng-model="password" required/>
+        </label>
+      </ion-list>
+
+
+      <button class="button button-medium button-full button-balanced" type="submit">Register</button>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view view-title="Contacts">
+  <ion-content class="padding">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Filtre" ng-model="search">
+      </label>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="contact in contacts | filter:search | orderBy : 'firstName'" type="item-text-wrap">
+        <h2>{{contact.firstName}} {{contact.lastName}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

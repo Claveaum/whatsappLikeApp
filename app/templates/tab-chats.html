@@ -1,0 +1,17 @@
+<ion-view view-title="Conversations">
+  <ion-content class="padding">
+
+    <button ui-sref="tab.chat-create" class="button button-full button-balanced">
+      Nouvelle Conversation
+    </button>
+    <div class="list list-inset">
+      <a ui-sref="tab.chat-detail({chatId: chat.$id})" ng-repeat="chat in chats | orderBy : 'creationDate' : 'reverse'"
+         class="item item-thumbnail-left">
+        <img src="images/icon-user-default.png">
+        <h2>{{chat.name}}</h2>
+        <h2>{{chat.description}}</h2>
+        <h2 am-time-ago="chat.creationDate"></h2>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
